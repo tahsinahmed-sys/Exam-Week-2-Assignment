@@ -42,33 +42,6 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-  void showProfileDialog() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text("User Details"),
-        content: const Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Name: Tahsin Ahmed"),
-            SizedBox(height: 8),
-            Text("Profession: Flutter Developer"),
-            SizedBox(height: 8),
-            Text("Email: 315232023@hub.edu.bd"),
-            SizedBox(height: 8),
-            Text("Phone: +880 1317XXXXXXX"),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text("Close"),
-          ),
-        ],
-      ),
-    );
-  }
 
   Widget interestCard({
     required String title,
@@ -292,14 +265,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
                     ),
                     SizedBox(height: 10,),
-                    OutlinedButton(
-                      onPressed: showProfileDialog,
-                      style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(borderRadius:BorderRadiusGeometry.circular(10) ),
-                        minimumSize: const Size(0, 50),
-                      ),
-                      child: const Text("View Profile"),
-                    ),
+
                   ],
                 ),
               ),
